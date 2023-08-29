@@ -239,14 +239,14 @@ select{
     opacity: .5;
 }
 
-.dialog.active .content{
+.dialog .content{
     position: absolute;
     top: 25%;
     bottom: 25%;
-    left: 25%;
+    left: 15%;
     min-height: 400px;
     
-    width: 50%;
+    width: 70%;
 
     background-color: #fff; 
     padding: 2em;
@@ -257,11 +257,15 @@ select{
     z-index: 999;
 }
 
-.dialog.active .content{
+.dialog .content{
     overflow-y: scroll;
 }
 
-.dialog.active .content ul li{
+.dialog .content ul li{
+    margin: .5em 0;
+}
+
+.dialog .content p{
     margin: .5em 0;
 }
 
