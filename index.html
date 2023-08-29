@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMT</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div class="dialog" id="dialog">
+        <div class="content">
+            <h2>Test</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptate nulla alias ipsum, distinctio
+                dolorem
+                magnam quisquam assumenda. Corrupti aut porro voluptatibus delectus perspiciatis natus et veniam
+                molestias
+                id ipsam repudiandae quas quaerat, corporis omnis, temporibus dicta magnam commodi architecto!</p>
+        </div>
+    </div>
+    <div class="MMT-container container">
+        <div class="MMT-main flex">
+            <div class="MMT-control flex">
+                <form action="">
+                    <h1><i class="fa-solid fa-envelope"></i> Massive Mail Tester</h1>
+                    <div class="form-group">
+                        <p>Select from:</p>
+                        <div class="flex">
+                            <select name="" id="">
+                                <option value="">Select Sender</option>
+                                <option value="">sender 1</option>
+                                <option value="">sender 2</option>
+                                <option value="">sender 3</option>
+                            </select>
+                            <p>@gamestop.com</p>
+                        </div>
+
+                    </div>
+                    <input type="text" name="" id="mailSubject" placeholder="Mail Subject">
+                    <hr class="divider">
+                    <div class="form-group">
+                        <label for="">Select <b>Header</b></label>
+                        <select name="" id="">
+                            <option value="">Select Template</option>
+                            <option value="">value 1</option>
+                            <option value="">value 2</option>
+                            <option value="">value 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Upload <b>Data File</b></label>
+                        <input type="file" name="" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Upload <b>Image</b></label>
+                        <input type="file" name="" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Select <b>Footer</b></label>
+                        <select name="" id="">
+                            <option value="">Select Template</option>
+                            <option value="">value 1</option>
+                            <option value="">value 2</option>
+                            <option value="">value 3</option>
+                        </select>
+                    </div>
+                    <hr class="divider">
+                    <div class="control-buttons">
+                        <button><i class="fa-solid fa-floppy-disk" id="saveConfig"></i> Save Configuration</button>
+                        <button disabled class="btn-empty" id="reset">Reset</button>
+                        <button class="btn-border" id="import"><i class="fa-solid fa-file-arrow-up"></i> Import</button>
+                    </div>
+                    <!-- @copyrigth -->
+                    <p class="subline">MMT - Massive Mail Tester v0.0.1 - &copy;GameStop Italia.
+                </form>
+            </div>
+            <div class="MMT-preview flex">
+                <div id="preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, fugit magnam. Commodi praesentium recusandae accusamus culpa blanditiis porro nam in numquam dolor quia pariatur ipsum non dignissimos id distinctio assumenda, laborum veniam? Magni cum a ut unde, nihil ea, repellendus ad quis earum, ex temporibus fugit praesentium. Corrupti, accusamus distinctio.</div>
+            </div>
+        </div>
+        <div class="MMT-submitBar">
+            <button id="info">
+                <i class="fa-solid fa-question"></i>
+            </button>
+            <div>
+                <button><i class="fa-solid fa-gear"></i> Send Test</button>
+                <div class="recipients">
+                    <label for=""><i class="fa-solid fa-users"></i> Upload recipients file</label>
+                    <input type="file" name="" id="">
+                </div>
+                <button disabled><i class="fa-sharp fa-solid fa-inbox"></i> Send Massively</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

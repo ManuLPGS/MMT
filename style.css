@@ -1,0 +1,276 @@
+* {
+    font-family: "Poppins", sans-serif;
+    transition: .2s ease;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: .5em;
+}
+
+.divider {
+    width: 80%;
+    margin: 1em auto;
+    background-color: #dfdfdf;
+    height: 1px;
+    border: none;
+}
+
+input[type=text] {
+    padding: .5em 1.5em;
+    width: calc((100% - 4px) - 3em);
+    border-radius: 85px;
+    border: 2px solid lightgrey;
+}
+
+input[type=file] {
+    text-align: end;
+}
+
+
+input::file-selector-button {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .1s ease;
+    pointer-events: all;
+    cursor: pointer;
+    height: 2.5em;
+    padding: 0 1em;
+    border-radius: 2em;
+    opacity: .6;
+    width: fit-content;
+    background-color: transparent;
+    border: 2px lightgray solid;
+    border-radius: 30px;
+}
+
+input::file-selector-button:hover {
+    opacity: 1;
+}
+
+button {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    height: 2.5em;
+    padding: 0 1em;
+    transition: .1s ease;
+    pointer-events: all;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #e81e25;
+    background-color: #e81e25;
+    border-radius: 2em;
+    width: max-content;
+}
+
+button:hover {
+    background-color: #a01318;
+    border-color: #a01318;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: auto;
+    user-select: none;
+}
+
+select{
+    border-radius: 10px;
+    padding: .5em .75em;
+    border: solid 2px lightgray;
+}
+
+.MMT-main {
+    height: 90vh;
+}
+
+.MMT-control {
+    width: 65%;
+}
+
+.MMT-preview {
+    width: 40%;
+    background-color: #5a5a5a;
+    height: 100%;
+}
+
+.MMT-preview #preview {
+    background-color: #fff;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.10);
+    width: 70%;
+    height: 85%;
+    padding: 2em 2em 1em 2em;
+}
+
+.MMT-submitBar {
+    height: 10vh;
+    background-color: #222;
+    color: #fff;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.MMT-submitBar>div {
+    justify-content: flex-end;
+    gap: 1em;
+    overflow: hidden;
+    display: flex;
+    margin-right: 2em;
+    align-items: center;
+}
+
+.form-group {
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8em;
+}
+
+.subline {
+    margin-top: 1em;
+    color: #cacaca;
+    font-size: .6em;
+}
+
+.btn-empty {
+    background-color: transparent;
+    border: none;
+    color: #e81e25;
+}
+
+.btn-empty:hover {
+    background-color: transparent;
+    border: none;
+    color: #a01318;
+}
+
+.btn-border {
+    background-color: transparent;
+    border-color: #e81e25;
+    color: #e81e25;
+}
+
+.btn-border:hover {
+    background-color: transparent;
+    border-color: #a01318;
+    color: #a01318;
+}
+
+.control-buttons {
+    width: 100%;
+    display: flex;
+}
+
+#import {
+    margin-left: auto;
+}
+
+#info{
+    margin-left: 2em;
+}
+
+.recipients {
+    width: fit-content;
+    padding: .2em 1.25em;
+    background-color: #ffff;
+    color: #222;
+    border-radius: 50px;
+}
+
+/* dialog */
+.dialog{
+    display: none;
+}
+
+.dialog.active {
+    display: block;
+    z-index: 999;
+}
+
+.dialog::before{
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #222;
+    opacity: .5;
+}
+
+.dialog.active .content{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    
+    width: 50%;
+
+    background-color: #fff; 
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.10);
+    z-index: 999;
+}
+
+#closeDialog{
+    margin-left: auto;
+    width: fit-content;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+@media (max-width:768px) {
+
+    .MMT-container,
+    .MMT-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .MMT-preview {
+        width: 100%;
+    }
+
+    .MMT-submitBar {
+        width: 100%;
+        padding: 0 1%;
+    }
+
+    .MMT-submitBar label {
+        display: none;
+    }
+
+    button,
+    input {
+        font-size: 10px;
+    }
+}
