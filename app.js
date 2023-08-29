@@ -3,6 +3,11 @@ const dialog = document.getElementById("dialog");
 const preview = document.getElementById("preview");
 const dialogContent = dialog.querySelector(".content");
 const guideInfo = dialogContent.innerHTML;
+const senderSelect = document.getElementById('senderSelect');
+const subjectSelect = document.getElementById('subjectSelect');
+const senderPreview = document.getElementById('senderPreview')
+const subjectPreview = document.getElementById('subjectPreview')
+
 
 const activeDialog = () => {
   closeDialogBtn();
@@ -23,6 +28,21 @@ const closeDialogBtn = () => {
     deactiveDialog();
   });
 };
+
+const setSenderPreview = () =>{
+  senderSelect.addEventListener('change', () =>{
+    senderPreview.innerHTML = '<b>From:</b> ' + senderSelect.value + '@gamestop.com'
+  })
+}
+const setSubjectPreview = () =>{
+  subjectSelect.addEventListener('keyup', (e) =>{
+    subjectPreview.innerHTML = '<b>Subject:</b> ' + e.target.value
+  })
+}
+
+setSubjectPreview()
+
+setSenderPreview()
 
 // playground
 

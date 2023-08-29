@@ -127,19 +127,15 @@ select{
     padding: 2em 2em 1em 2em;
     font-size: .8em;
     cursor: pointer;
-    position: relative;
+    overflow: hidden;
 }
 
 .MMT-preview #preview::after{
     content: 'PREVIEW';
     color: #a01318;
     display: block;
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 10%;
     font-size: 10em;
-    transform: rotate(-45deg);
+    transform: translateY(100%) rotate(-45deg);
     opacity: .05;
 }
 
@@ -149,7 +145,6 @@ select{
     color: #fff;
     width: 100%;
     position: relative;
-    z-index: 100;
 
     display: flex;
     flex-wrap: nowrap;
@@ -229,7 +224,6 @@ select{
 /* dialog */
 .dialog{
     display: none;
-    z-index: 999;
 }
 
 .dialog.active {
@@ -263,7 +257,7 @@ select{
     z-index: 999;
 }
 
-.dialog.active .content ul{
+.dialog.active .content{
     overflow-y: scroll;
 }
 
@@ -271,13 +265,13 @@ select{
     margin: .5em 0;
 }
 
-#closeDialog{
+#closeDialog {
     margin-left: auto;
     width: fit-content;
     cursor: pointer;
-    position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 0;
+    top: 0;
+    position: sticky;
 }
 
 @media (max-width:768px) {

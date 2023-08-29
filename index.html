@@ -42,17 +42,17 @@
                     <div class="form-group">
                         <p>Select from:</p>
                         <div class="flex">
-                            <select name="" id="">
-                                <option value="">Select Sender</option>
-                                <option value="">sender 1</option>
-                                <option value="">sender 2</option>
-                                <option value="">sender 3</option>
+                            <select name="" id="senderSelect">
+                                <option>Select Sender</option>
+                                <option value="sender 1">sender 1</option>
+                                <option value="sender 2">sender 2</option>
+                                <option value="sender 3">sender 3</option>
                             </select>
                             <p>@gamestop.com</p>
                         </div>
 
                     </div>
-                    <input type="text" name="" id="mailSubject" placeholder="Mail Subject">
+                    <input type="text" name="" id="subjectSelect" placeholder="Mail Subject">
                     <hr class="divider">
                     <div class="form-group">
                         <label for="">Select <b>Header</b></label>
@@ -91,10 +91,11 @@
                 </form>
             </div>
             <div class="MMT-preview flex">
-                <div id="preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, fugit magnam.
-                    Commodi praesentium recusandae accusamus culpa blanditiis porro nam in numquam dolor quia pariatur
-                    ipsum non dignissimos id distinctio assumenda, laborum veniam? Magni cum a ut unde, nihil ea,
-                    repellendus ad quis earum, ex temporibus fugit praesentium. Corrupti, accusamus distinctio.</div>
+                <div id="preview">
+                    <p id="senderPreview"><b>From:</b></p>
+                    <p id="subjectPreview"><b>Subject:</b></p>
+                    <hr class="divider">
+                </div>
             </div>
         </div>
         <div class="MMT-submitBar">
