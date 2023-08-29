@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+h1,h2,p{
+    color: #333;
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -121,6 +125,22 @@ select{
     width: 70%;
     height: 85%;
     padding: 2em 2em 1em 2em;
+    font-size: .8em;
+    cursor: pointer;
+    position: relative;
+}
+
+.MMT-preview #preview::after{
+    content: 'PREVIEW';
+    color: #a01318;
+    display: block;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 10%;
+    font-size: 10em;
+    transform: rotate(-45deg);
+    opacity: .05;
 }
 
 .MMT-submitBar {
@@ -128,8 +148,11 @@ select{
     background-color: #222;
     color: #fff;
     width: 100%;
+    position: relative;
+    z-index: 100;
 
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -206,11 +229,11 @@ select{
 /* dialog */
 .dialog{
     display: none;
+    z-index: 999;
 }
 
 .dialog.active {
     display: block;
-    z-index: 999;
 }
 
 .dialog::before{
@@ -224,19 +247,28 @@ select{
 
 .dialog.active .content{
     position: absolute;
-    top: 30%;
+    top: 25%;
+    bottom: 25%;
     left: 25%;
+    min-height: 400px;
     
     width: 50%;
 
     background-color: #fff; 
     padding: 2em;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.10);
     z-index: 999;
+}
+
+.dialog.active .content ul{
+    overflow-y: scroll;
+}
+
+.dialog.active .content ul li{
+    margin: .5em 0;
 }
 
 #closeDialog{

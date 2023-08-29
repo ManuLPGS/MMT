@@ -10,18 +10,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="./app.js" defer></script>
+    <script src="./app.js" defer></script>
 </head>
 
 <body>
     <div class="dialog" id="dialog">
         <div class="content">
-            <h2>Test</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptate nulla alias ipsum, distinctio
-                dolorem
-                magnam quisquam assumenda. Corrupti aut porro voluptatibus delectus perspiciatis natus et veniam
-                molestias
-                id ipsam repudiandae quas quaerat, corporis omnis, temporibus dicta magnam commodi architecto!</p>
+            <h2>MMT - How To Use</h2>
+            <p>The Massive Mail Tester is a powerful tool designed for generating and testing emails and various communications before the final send. To make the most of its capabilities, follow these steps:</p>
+            <ul>
+                <li>Select a standard sender provided by the dropdown menu </li>
+                <li>Define the Email Object </li>
+                <li>Select the Header nad the Footer provided by the dropdown menu </li>
+                <li>upload both the Excel file with th email data and any additional images on the right place. </li>
+                <li>You can save the confuguration or <button class="btn-border" style="user-select: none;" id="import"><i class="fa-solid fa-file-arrow-up"></i> Import</button> a new one as well. </li>
+                <li>After having checked out the preview on the right, you should proceed with sending a test email
+                    pressing on <button><i class="fa-solid fa-gear" style="user-select: none;"></i> Send Test
+                        Email</button> that will be sent at the email address provided at point (1).</li>
+                <li>if you are satisfied with the result seen, go on with uploading and excel file with all the
+                    recipients you want to send the email to. </li>
+                <li>Press <button><i class="fa-sharp fa-solid fa-inbox" style="user-select: none;"></i> Send Email
+                        Massively</button> to send the email to all recipients provided by the excel file.</li>
+            </ul>
         </div>
     </div>
     <div class="MMT-container container">
@@ -81,7 +91,10 @@
                 </form>
             </div>
             <div class="MMT-preview flex">
-                <div id="preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, fugit magnam. Commodi praesentium recusandae accusamus culpa blanditiis porro nam in numquam dolor quia pariatur ipsum non dignissimos id distinctio assumenda, laborum veniam? Magni cum a ut unde, nihil ea, repellendus ad quis earum, ex temporibus fugit praesentium. Corrupti, accusamus distinctio.</div>
+                <div id="preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, fugit magnam.
+                    Commodi praesentium recusandae accusamus culpa blanditiis porro nam in numquam dolor quia pariatur
+                    ipsum non dignissimos id distinctio assumenda, laborum veniam? Magni cum a ut unde, nihil ea,
+                    repellendus ad quis earum, ex temporibus fugit praesentium. Corrupti, accusamus distinctio.</div>
             </div>
         </div>
         <div class="MMT-submitBar">
@@ -89,12 +102,12 @@
                 <i class="fa-solid fa-question"></i>
             </button>
             <div>
-                <button><i class="fa-solid fa-gear"></i> Send Test</button>
+                <button><i class="fa-solid fa-gear"></i> Send Test Email</button>
                 <div class="recipients">
                     <label for=""><i class="fa-solid fa-users"></i> Upload recipients file</label>
                     <input type="file" name="" id="">
                 </div>
-                <button disabled><i class="fa-sharp fa-solid fa-inbox"></i> Send Massively</button>
+                <button disabled><i class="fa-sharp fa-solid fa-inbox"></i> Send Email Massively</button>
             </div>
         </div>
     </div>

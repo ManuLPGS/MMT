@@ -33,7 +33,8 @@ info.addEventListener("click", () => {
 
 preview.addEventListener("click", (e) => {
   dialogContent.innerHTML = "";
-  dialogContent.innerHTML = preview.innerHTML;
+  dialogContent.innerHTML += '<h2>Mail Content</h2>';
+  dialogContent.innerHTML += preview.innerHTML;
 
   activeDialog();
 
