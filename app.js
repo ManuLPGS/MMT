@@ -1,68 +1,92 @@
-const info = document.getElementById("info");
-const dialog = document.getElementById("dialog");
-const preview = document.getElementById("preview");
-const dialogContent = dialog.querySelector(".content");
-const guideInfo = dialogContent.innerHTML;
-const senderSelect = document.getElementById("senderSelect");
-const subjectSelect = document.getElementById("subjectSelect");
-const senderPreview = document.getElementById("senderPreview");
-const subjectPreview = document.getElementById("subjectPreview");
-const resetFormBtn = document.getElementById("reset");
-const mailerForm = document.getElementById("mailerForm")
+class MMT {
+  constructor(element) {
+    element = document.querySelector(element);
+    this.info = element.querySelector("#info");
+    this.dialog = element.querySelector("#dialog");
+    this.preview = element.querySelector("#preview");
+    this.dialogContent = this.dialog.querySelector(".content");
+    this.senderSelect = element.querySelector("#senderSelect");
+    this.subjectSelect = element.querySelector("#subjectSelect");
+    this.senderPreview = element.querySelector("#senderPreview");
+    this.subjectPreview = element.querySelector("#subjectPreview");
+    this.resetFormBtn = element.querySelector("#reset");
+    this.mailerForm = element.querySelector("#mailerForm");
+    this.guideInfo = this.dialogContent.innerHTML;
 
-const activeDialog = () => {
-  closeDialogBtn();
-  dialog.classList.add("active");
-};
-const deactiveDialog = () => dialog.classList.remove("active");
-const closeOnclickingOutsideDialog = () => {
-  dialog.addEventListener("click", (e) => {
-    if (e.target != dialog) return;
-    deactiveDialog();
-  });
-};
-const closeDialogBtn = () => {
-  const closeBtn = '<i class="fa-solid fa-xmark" id="closeDialog"></i>';
-  dialogContent.insertAdjacentHTML("afterbegin", closeBtn);
-  const closeDialog = document.getElementById("closeDialog");
-  closeDialog.addEventListener("click", () => {
-    deactiveDialog();
-  });
-};
+    this.initialize();
+  }
 
-const setSenderPreview = () => {
-  senderSelect.addEventListener("change", () => {
-    senderPreview.innerHTML = ["<b>From:</b> ",senderSelect.value,"@gamestop.com"].join('');
-  });
-};
-const setSubjectPreview = () => {
-  subjectSelect.addEventListener("keyup", (e) => {
-    subjectPreview.innerHTML = ["<b>Subject:</b> ",e.target.value].join('');
-  });
-};
+  openDialog() {
+    this.closeDialogBtnHandler();
+    this.dialog.classList.add("active");
+  }
 
-const resetForm = () => {
-  mailerForm.addEventListener("change", () => {
-    resetFormBtn.disabled = false;
-    resetFormBtn.addEventListener("click", () => {
-      mailerForm.reset();
+  closeDialog() {
+    this.dialog.classList.remove("active");
+  }
+
+  closeOnclickingOutsideDialog() {
+    this.dialog.addEventListener("click", (e) => {
+      if (e.target != this.dialog) return;
+      this.closeDialog();
     });
-  });
-};
+  }
 
-// playground
+  closeDialogBtnHandler() {
+    const closeBtn = '<i class="fa-solid fa-xmark" id="closeDialog"></i>';
+    this.dialogContent.insertAdjacentHTML("afterbegin", closeBtn);
+    const closeDialog = document.getElementById("closeDialog");
+    closeDialog.addEventListener("click", () => {
+      this.closeDialog();
+    });
+  }
 
-setSubjectPreview();
-setSenderPreview();
-resetForm();
+  setSenderPreview() {
+    this.senderSelect.addEventListener("change", () => {
+      this.senderPreview.innerHTML = [
+        "<b>From:</b> ",
+        this.senderSelect.value,
+        "@gamestop.com",
+      ].join("");
+    });
+  }
 
-info.addEventListener("click", () => {
-  dialogContent.innerHTML = guideInfo;
-  activeDialog();
-});
+  setSubjectPreview() {
+    this.subjectSelect.addEventListener("keyup", (e) => {
+      this.subjectPreview.innerHTML = ["<b>Subject:</b> ", e.target.value].join(
+        ""
+      );
+    });
+  }
 
-preview.addEventListener("click", () => {
-  dialogContent.innerHTML = ["<h2>Mail Content</h2>",preview.innerHTML].join('\n');
-  activeDialog();
-  closeOnclickingOutsideDialog();
-})
+  clearForm() {
+    this.mailerForm.addEventListener("change", () => {
+      this.resetFormBtn.disabled = false;
+      this.resetFormBtn.addEventListener("click", () => {
+        this.mailerForm.reset();
+      });
+    });
+  }
+
+  initialize() {
+    this.setSubjectPreview();
+    this.setSenderPreview();
+    this.clearForm();
+
+    this.info.addEventListener("click", () => {
+      this.dialogContent.innerHTML = this.guideInfo;
+      this.openDialog();
+    });
+
+    this.preview.addEventListener("click", () => {
+      this.dialogContent.innerHTML = [
+        "<h2>Mail Content</h2>",
+        this.preview.innerHTML,
+      ].join("\n");
+      this.openDialog();
+      this.closeOnclickingOutsideDialog();
+    });
+  }
+}
+
+const massiveMailTester = new MMT(".MMT");

@@ -9,7 +9,9 @@ body {
     padding: 0;
 }
 
-h1,h2,p{
+h1,
+h2,
+p {
     color: #333;
 }
 
@@ -99,7 +101,7 @@ button:disabled {
     user-select: none;
 }
 
-select{
+select {
     border-radius: 10px;
     padding: .5em .75em;
     border: solid 2px lightgray;
@@ -130,7 +132,7 @@ select{
     overflow: hidden;
 }
 
-.MMT-preview #preview::after{
+.MMT-preview #preview::after {
     content: 'PREVIEW';
     color: #a01318;
     display: block;
@@ -209,7 +211,7 @@ select{
     margin-left: auto;
 }
 
-#info{
+#info {
     margin-left: 2em;
 }
 
@@ -222,7 +224,7 @@ select{
 }
 
 /* dialog */
-.dialog{
+.dialog {
     display: none;
 }
 
@@ -230,7 +232,7 @@ select{
     display: block;
 }
 
-.dialog::before{
+.dialog::before {
     content: '';
     width: 100vw;
     height: 100vh;
@@ -239,33 +241,46 @@ select{
     opacity: .5;
 }
 
-.dialog .content{
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    left: 15%;
-    min-height: 400px;
-    
-    width: 70%;
+.dialog .content {
+    width: 80%;
+    height: fit-content;
+    max-height: 70%;
+    min-height: 50%;
 
-    background-color: #fff; 
+    background-color: #fff;
     padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.10);
     z-index: 999;
-}
 
-.dialog .content{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
     overflow-y: scroll;
+    opacity: 0;
+    animation: showUp .2s forwards;
 }
 
-.dialog .content ul li{
+@keyframes showUp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dialog .content ul li {
     margin: .5em 0;
 }
 
-.dialog .content p{
+.dialog .content p {
     margin: .5em 0;
 }
 
