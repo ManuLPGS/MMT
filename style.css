@@ -129,16 +129,18 @@ select {
     padding: 2em 2em 1em 2em;
     font-size: .8em;
     cursor: pointer;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.MMT-preview #preview::after {
+.MMT-preview .stamp {
     content: 'PREVIEW';
     color: #a01318;
     display: block;
-    font-size: 10em;
+    font-size: 6vw;
     transform: translateY(100%) rotate(-45deg);
     opacity: .05;
+    position: absolute;
 }
 
 .MMT-submitBar {
@@ -261,10 +263,13 @@ select {
     transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     opacity: 0;
     animation: showUp .2s forwards;
 }
+
+.dialog .stamp{display: none;}
 
 @keyframes showUp {
     from {

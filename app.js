@@ -43,11 +43,17 @@ class MMT {
 
   setSenderPreview() {
     this.senderSelect.addEventListener("change", () => {
-      this.senderPreview.innerHTML = [
-        "<b>From:</b> ",
-        this.senderSelect.value,
-        "@gamestop.com",
-      ].join("");
+      if (this.senderSelect.value == "") {
+        this.senderPreview.innerHTML = [
+          "<b>From:</b> "
+        ].join("");
+      } else {
+        this.senderPreview.innerHTML = [
+          "<b>From:</b> ",
+          this.senderSelect.value,
+          "@gamestop.com",
+        ].join("");
+      }
     });
   }
 
