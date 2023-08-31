@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="./app.js" defer></script>
 </head>
 
@@ -83,9 +84,9 @@
                     </div>
                     <hr class="divider">
                     <div class="control-buttons">
-                        <button><i class="fa-solid fa-floppy-disk" id="saveConfig"></i> Save Configuration</button>
+                        <button><i class="bi bi-save-fill"></i> Save Configuration</button>
                         <button disabled class="btn-empty" id="reset">Reset</button>
-                        <button class="btn-border" id="import"><i class="fa-solid fa-file-arrow-up"></i> Import</button>
+                        <button class="btn-border" id="import"><i class="bi bi-file-earmark-arrow-up-fill"></i> Import</button>
                     </div>
                     <!-- @copyrigth -->
                     <p class="subline">MMT - Massive Mail Tester v0.0.1 - &copy;GameStop Italia.
@@ -102,15 +103,15 @@
         </div>
         <div class="MMT-submitBar">
             <button id="info">
-                <i class="fa-solid fa-question"></i>
+                <i class="bi bi-question"></i>
             </button>
             <div>
-                <button><i class="fa-solid fa-gear"></i> Send Test Email</button>
+                <button><i class="bi bi-gear-fill"></i> Send Test Email</button>
                 <div class="recipients">
-                    <label for=""><i class="fa-solid fa-users"></i> Upload recipients file</label>
+                    <label for=""><i class="bi bi-person-fill"></i> Upload recipients file</label>
                     <input type="file" name="" id="">
                 </div>
-                <button disabled><i class="fa-sharp fa-solid fa-inbox"></i> Send Email Massively</button>
+                <button disabled><i class="bi bi-inbox-fill"></i> Send Email Massively</button>
             </div>
         </div>
     </div>
