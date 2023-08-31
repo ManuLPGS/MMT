@@ -7,115 +7,117 @@
     <title>MMT</title>
 
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="./app.js" defer></script>
 </head>
 
 <body>
     <div class="MMT">
-    <div class="dialog" id="dialog">
-        <div class="content">
-            <h2>MMT - How To Use</h2>
-            <p>The Massive Mail Tester is a powerful tool designed for generating and testing emails and various communications before the final send. To make the most of its capabilities, follow these steps:</p>
-            <ul>
-                <li>Select a standard sender provided by the dropdown menu </li>
-                <li>Define the Email Object </li>
-                <li>Select the Header nad the Footer provided by the dropdown menu </li>
-                <li>upload both the Excel file with th email data and any additional images on the right place. </li>
-                <li>You can save the confuguration or <button class="btn-border" style="user-select: none;" id="import"><i class="fa-solid fa-file-arrow-up"></i> Import</button> a new one as well. </li>
-                <li>After having checked out the preview on the right, you should proceed with sending a test email
-                    pressing on <button><i class="fa-solid fa-gear" style="user-select: none;"></i> Send Test
-                        Email</button> that will be sent at the email address provided at point (1).</li>
-                <li>if you are satisfied with the result seen, go on with uploading and excel file with all the
-                    recipients you want to send the email to. </li>
-                <li>Press <button><i class="fa-sharp fa-solid fa-inbox" style="user-select: none;"></i> Send Email
-                        Massively</button> to send the email to all recipients provided by the excel file.</li>
-            </ul>
+        <div class="dialog" id="dialog">
+            <div class="content">
+                <h2>MMT - How To Use</h2>
+                <p>The Massive Mail Tester is a powerful tool designed for generating and testing emails and various
+                    communications before the final send. To make the most of its capabilities, follow these steps:</p>
+                <ul>
+                    <li>Select a standard sender provided by the dropdown menu </li>
+                    <li>Define the Email Object </li>
+                    <li>Select the Header nad the Footer provided by the dropdown menu </li>
+                    <li>upload both the Excel file with th email data and any additional images on the right place.
+                    </li>
+                    <li>You can save the confuguration or <button class="btn-border" style="user-select: none;"
+                            id="import"><i class="fa-solid fa-file-arrow-up"></i> Import</button> a new one as well.
+                    </li>
+                    <li>After having checked out the preview on the right, you should proceed with sending a test email
+                        pressing on <button><i class="fa-solid fa-gear" style="user-select: none;"></i> Send Test
+                            Email</button> that will be sent at the email address provided at point (1).</li>
+                    <li>if you are satisfied with the result seen, go on with uploading and excel file with all the
+                        recipients you want to send the email to. </li>
+                    <li>Press <button><i class="fa-sharp fa-solid fa-inbox" style="user-select: none;"></i> Send Email
+                            Massively</button> to send the email to all recipients provided by the excel file.</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="MMT-container container">
-        <div class="MMT-main flex">
-            <div class="MMT-control flex">
-                <form id="mailerForm" action="">
-                    <h1><i class="fa-solid fa-envelope"></i> Massive Mail Tester</h1>
-                    <div class="form-group">
-                        <p>Select from:</p>
-                        <div class="flex">
-                            <select name="" id="senderSelect">
-                                <option value="">Select Sender</option>
-                                <option value="sender 1">sender 1</option>
-                                <option value="sender 2">sender 2</option>
-                                <option value="sender 3">sender 3</option>
-                            </select>
-                            <p>@gamestop.com</p>
-                        </div>
+        <div class="MMT-container container">
+            <div class="MMT-main flex">
+                <div class="MMT-control flex">
+                    <form id="mailerForm" action="">
+                        <h1><i class="fa-solid fa-envelope"></i> Massive Mail Tester</h1>
+                        <div class="form-group">
+                            <p>Select from:</p>
+                            <div class="flex">
+                                <select name="" id="senderSelect">
+                                    <option value="">Select Sender</option>
+                                    <option value="sender 1">sender 1</option>
+                                    <option value="sender 2">sender 2</option>
+                                    <option value="sender 3">sender 3</option>
+                                </select>
+                                <p>@gamestop.com</p>
+                            </div>
 
+                        </div>
+                        <input type="text" name="" id="subjectSelect" placeholder="Mail Subject">
+                        <hr class="divider">
+                        <div class="form-group">
+                            <label for="">Select <b>Header</b></label>
+                            <select name="" id="">
+                                <option value="">Select Template</option>
+                                <option value="">value 1</option>
+                                <option value="">value 2</option>
+                                <option value="">value 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Upload <b>Data File</b></label>
+                            <input type="file" name="" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Upload <b>Image</b></label>
+                            <input type="file" name="" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Select <b>Footer</b></label>
+                            <select name="" id="">
+                                <option value="">Select Template</option>
+                                <option value="">value 1</option>
+                                <option value="">value 2</option>
+                                <option value="">value 3</option>
+                            </select>
+                        </div>
+                        <hr class="divider">
+                        <div class="control-buttons">
+                            <button><i class="bi bi-save-fill"></i> Save Configuration</button>
+                            <button disabled class="btn-empty" id="reset">Reset</button>
+                            <button class="btn-border" id="import"><i class="bi bi-file-earmark-arrow-up-fill"></i>
+                                Import</button>
+                        </div>
+                        <!-- @copyrigth -->
+                        <p class="subline">MMT - Massive Mail Tester v0.0.1 - &copy;GameStop Italia.
+                    </form>
+                </div>
+                <div class="MMT-preview flex">
+                    <div id="preview">
+                        <div class="stamp">PREVIEW</div>
+                        <p id="senderPreview"><b>From:</b></p>
+                        <p id="subjectPreview"><b>Subject:</b></p>
+                        <hr class="divider">
                     </div>
-                    <input type="text" name="" id="subjectSelect" placeholder="Mail Subject">
-                    <hr class="divider">
-                    <div class="form-group">
-                        <label for="">Select <b>Header</b></label>
-                        <select name="" id="">
-                            <option value="">Select Template</option>
-                            <option value="">value 1</option>
-                            <option value="">value 2</option>
-                            <option value="">value 3</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Upload <b>Data File</b></label>
-                        <input type="file" name="" id="">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Upload <b>Image</b></label>
-                        <input type="file" name="" id="">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Select <b>Footer</b></label>
-                        <select name="" id="">
-                            <option value="">Select Template</option>
-                            <option value="">value 1</option>
-                            <option value="">value 2</option>
-                            <option value="">value 3</option>
-                        </select>
-                    </div>
-                    <hr class="divider">
-                    <div class="control-buttons">
-                        <button><i class="bi bi-save-fill"></i> Save Configuration</button>
-                        <button disabled class="btn-empty" id="reset">Reset</button>
-                        <button class="btn-border" id="import"><i class="bi bi-file-earmark-arrow-up-fill"></i> Import</button>
-                    </div>
-                    <!-- @copyrigth -->
-                    <p class="subline">MMT - Massive Mail Tester v0.0.1 - &copy;GameStop Italia.
-                </form>
-            </div>
-            <div class="MMT-preview flex">
-                <div id="preview">
-                    <div class="stamp">PREVIEW</div>
-                    <p id="senderPreview"><b>From:</b></p>
-                    <p id="subjectPreview"><b>Subject:</b></p>
-                    <hr class="divider">
                 </div>
             </div>
-        </div>
-        <div class="MMT-submitBar">
-            <button id="info">
-                <i class="bi bi-question"></i>
-            </button>
-            <div>
-                <button><i class="bi bi-gear-fill"></i> Send Test Email</button>
-                <div class="recipients">
-                    <label for=""><i class="bi bi-person-fill"></i> Upload recipients file</label>
-                    <input type="file" name="" id="">
+            <div class="MMT-submitBar">
+                <button id="info">
+                    <i class="bi bi-question"></i>
+                </button>
+                <div>
+                    <button><i class="bi bi-gear-fill"></i> Send Test Email</button>
+                    <div class="recipients">
+                        <label for=""><i class="bi bi-person-fill"></i> Upload recipients file</label>
+                        <input type="file" name="" id="">
+                    </div>
+                    <button disabled><i class="bi bi-inbox-fill"></i> Send Email Massively</button>
                 </div>
-                <button disabled><i class="bi bi-inbox-fill"></i> Send Email Massively</button>
             </div>
         </div>
     </div>
-</div>
 
 </body>
 
